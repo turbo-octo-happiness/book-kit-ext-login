@@ -8,13 +8,15 @@ var userProfile;
 
 document.getElementById('btn-login').addEventListener('click', function () {
     lock.show(function (err, profile, token) {
+        console.log(token);
         if (err) {
+            console.log('error happened');
             // Error callback
             console.error("Something went wrong: ", err);
             alert("Something went wrong, check the Console errors");
         } else {
             // Success calback
-
+            console.log('success happened');
             // Save the JWT token.
             localStorage.setItem('userToken', token);
 
