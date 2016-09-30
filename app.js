@@ -8,6 +8,7 @@ var userProfile;
 
 document.getElementById('btn-login').addEventListener('click', function () {
     lock.show(function (err, profile, token) {
+        console.log(token);
         if (err) {
             console.log('error happened');
             // Error callback
